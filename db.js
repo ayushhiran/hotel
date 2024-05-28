@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-// const url = 'mongodb://127.0.0.1:27017/hotel';
-const url = 'mongodb+srv://ayushhiran:Ayush123@ayushtestdb.5ctdabu.mongodb.net/';
+const url = process.env.DB_URL || 'mongodb://127.0.0.1:27017/hotel';
 
 mongoose.connect(url, {
     useNewUrlParser: true,

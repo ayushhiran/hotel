@@ -12,7 +12,7 @@ router.post('/', async function (req, res) {
         res.status(200).json(response);
     }
     catch (err) {
-        console.log(err);
+        console.log('Error while saving data in db', err.message);
         res.status(500).json({ error: 'Error while saving data' })
     }
 });
